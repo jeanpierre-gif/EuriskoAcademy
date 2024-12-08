@@ -46,4 +46,20 @@ const getBookById = async (req, res) => {
   res.status(500).json({success:false, message:err.message});
  }
 }
-module.exports = { createBook,getBookById };
+
+//delete book by id
+const deleteBookById = async (req, res) => {
+  const bookId = req.params.bookId;
+  console.log(bookId);
+  try{
+   const book = await Book.findByIdAndDelete(bookId);
+   if(!book) return res.status(404).json({ success: false, message: 'Book not found' });
+  
+   res.status(200).json({ success: true, message: 'Book deleted successfully' });
+
+  }catch(err){
+    res.status(500).json({ success: false, message: err.message });
+
+  }
+}
+module.exports = { createBook,getBookById ,deleteBookById};
