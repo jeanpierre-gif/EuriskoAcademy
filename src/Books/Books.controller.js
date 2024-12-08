@@ -4,6 +4,7 @@ const bookValidationSchema = require("../Validators/Books.validator");
 const createBook = async (req, res) => {
   try {
     const { error, value } = bookValidationSchema.validate(req.body, {
+      //this is used to not stop the validation after the first field fails
       abortEarly: false,
     });
 
@@ -11,6 +12,7 @@ const createBook = async (req, res) => {
       return res.status(400).json({
         success: false,
         message: "Validation error",
+        //mappign to display all the errors
         details: error.details.map((err) => err.message),
       });
     }
@@ -29,4 +31,19 @@ const createBook = async (req, res) => {
   }
 };
 
-module.exports = { createBook };
+//get book by id
+const getBookById = async (req, res) => {
+ const bookId = req.params.bookId;
+ try{
+   const book = await Book.findById(bookId).select('-updatedAt -publishedDate');
+   if(!book){
+   res.status(404).json({success:false,message:"book not found"});
+
+   }
+   res.status(200).json({ success: true, data: book });
+
+ }catch(err){
+  res.status(500).json({success:false, message:err.message});
+ }
+}
+module.exports = { createBook,getBookById };
