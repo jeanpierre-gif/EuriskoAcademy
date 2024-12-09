@@ -1,5 +1,7 @@
 const Author = require("./Authors.model");
 const AuthorValidationSchema = require('../Validators/Authors.validator');
+
+//CMS APIs
 const createAuthor = async (req, res) => {
   try {
     const {error, value}=AuthorValidationSchema.validate(req.body,{
@@ -71,6 +73,81 @@ try{
   }
   res.status(500).json({success:false,message:err.message});
 }
-
 }
-module.exports = { createAuthor,getAuthorById, deleteAuthorById};
+//update the author details by id,only modifying the provided fields
+const updateAuthorById = async (req, res) => {
+  try {
+    const id = req.query["author-id"];
+    if (!id || id.trim() === '') {
+      return res.status(400).json({ success: false, message: "Missing or invalid author-id" });
+    }
+
+    //get the existing author from the database
+    const author = await Author.findById(id);
+    if (!author) {
+      return res.status(404).json({ success: false, message: 'Author not found' });
+    }
+
+    //merge the existing author data with the new data from the req
+    const updates = req.body;
+    const profileImageUrl = req.file;
+    //merge old values with new ones,and keep existing if not provided in the request
+    const updatedData = {
+      name: {
+        en: updates.name?.en || author.name.en,
+        ar: updates.name?.ar || author.name.ar
+      },
+      biography: {
+        en: updates.biography?.en || author.biography.en,
+        ar: updates.biography?.ar || author.biography.ar
+      },
+      email: updates.email || author.email,
+      birthDate: updates.birthDate || author.birthDate,
+      profileImageUrl: profileImageUrl ?  profileImageUrl.filename : author.profileImageUrl
+    };
+
+    //validate the new data
+    const { error, value } = AuthorValidationSchema.validate(updatedData, {
+      abortEarly: false
+    });
+
+    if (error) {
+      return res.status(400).json({
+        success: false,
+        message: "Validation error",
+        details: error.details.map((err) => err.message),
+      });
+    }
+
+    //check if the email is already in use by another author
+    const existingEmail = await Author.findOne({ email: value.email });
+    if (existingEmail && existingEmail._id.toString() !== id) {
+      return res.status(400).json({
+        success: false,
+        message: "An author with this email already exists",
+      });
+    }
+
+    //apply the updates to the author object
+    author.name.en = updatedData.name.en;
+    author.name.ar = updatedData.name.ar;
+    author.biography.en = updatedData.biography.en;
+    author.biography.ar = updatedData.biography.ar;
+    author.email = updatedData.email;
+    author.birthDate = updatedData.birthDate;
+    author.profileImageUrl = updatedData.profileImageUrl;
+
+    //save the updated author
+    await author.save();
+    res.status(200).json({ success: true, data: author });
+
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+
+//Web API
+
+
+module.exports = { createAuthor,getAuthorById, deleteAuthorById,updateAuthorById};

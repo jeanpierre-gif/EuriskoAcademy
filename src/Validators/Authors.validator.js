@@ -37,7 +37,7 @@ const AuthorValidationSchema = joi.object({
           }), 
          
       }),
-      profileImageUrl:joi.string().uri(),
+      profileImageUrl:joi.string().pattern(/\.(jpg|jpeg|png|gif)$/i).required(),
       birthDate:joi.date()
 })
 module.exports = AuthorValidationSchema;
