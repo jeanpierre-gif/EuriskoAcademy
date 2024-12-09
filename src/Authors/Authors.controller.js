@@ -32,4 +32,45 @@ const createAuthor = async (req, res) => {
     return res.status(500).json({success:false, message: err.message });
   }
 };
-module.exports = { createAuthor };
+
+//get author by id
+const getAuthorById = async (req, res) => {
+  try{
+    const id =req.query['author-id'];
+    if (!id || id.trim() === "") {
+      return res.status(400).json({ success: false, message: "Missing or invalid author-id" });
+  }
+    console.log(id);
+    const authorfound = await Author.findById(id);
+    console.log(authorfound);
+    if(!authorfound) return res.status(404).json({success:false,message:"Author not found"});
+
+    res.status(200).json({success:true,data:authorfound});
+  }catch(err){
+    if (err.name === "CastError") {
+      return res.status(400).json({ success: false, message: "Invalid author-id format" });
+    }
+    res.status(500).json({success:false,message:err.message});
+  }
+}
+
+//delete author by id
+const deleteAuthorById = async (req,res)=>{
+try{
+  const id = req.query['author-id'];
+  if(!id || id.trim()===''){
+    return res.status(400).json({ success: false, message: "Missing or invalid author-id" });
+  }
+  const authorDeleted = await Author.findByIdAndDelete(id);
+  if(!authorDeleted) return res.status(404).json({ success: false, message: 'Book not found' });
+  res.status(200).json({success:true,message:"author deleted"});
+
+}catch(err){
+  if (err.name === "CastError") {
+    return res.status(400).json({ success: false, message: "Invalid author-id format" });
+  }
+  res.status(500).json({success:false,message:err.message});
+}
+
+}
+module.exports = { createAuthor,getAuthorById, deleteAuthorById};
