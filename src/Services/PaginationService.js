@@ -1,23 +1,39 @@
-const paginate = async (model, filter, options) => {
-  const { page = 1, limit = 10, sort = {}, projection = "" } = options;
-  const skip = (page - 1) * limit;
-  const result = await model
-    .find(filter)
-    .select(projection)
-    .sort(sort)
-    .skip(skip)
-    .limit(limit);
-  const totalItems = await model.countDocuments(filter);
+class Paginator {
+  constructor(model, filter, options = {}) {
+    this.model = model;
+    this.filter = filter;
+    this.page = options.page || 1;
+    this.limit = options.limit || 10;
+    this.sort = options.sort || {};
+    this.projection = options.projection || "";
+  }
 
-  return {
-    pagination: {
-      totalItems,
-      currentPage: page,
-      totalPages: Math.ceil(totalItems / limit),
-      pageSize: limit,
-    },
-    data: result,
-  };
-};
+  async paginate() {
+    const skip = (this.page - 1) * this.limit;
 
-module.exports = paginate;
+    try {
+      const result = await this.model
+        .find(this.filter)
+        .select(this.projection)
+        .sort(this.sort)
+        .skip(skip)
+        .limit(this.limit);
+
+      const totalItems = await this.model.countDocuments(this.filter);
+
+      return {
+        pagination: {
+          totalItems,
+          currentPage: this.page,
+          totalPages: Math.ceil(totalItems / this.limit),
+          pageSize: this.limit,
+        },
+        data: result,
+      };
+    } catch (err) {
+      throw new Error(err.message); 
+    }
+  }
+}
+
+module.exports = Paginator;
