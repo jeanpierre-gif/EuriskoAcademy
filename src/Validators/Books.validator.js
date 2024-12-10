@@ -47,12 +47,15 @@ const bookValidationSchema = joi.object({
   numberOfBorrowableDays: joi.number().min(0).default(0),
   isOpenToReviews: joi.boolean().default(false),
   minAge: joi.number().min(0).required(),
+  coverImageUrl:joi
+  .string()
+  .pattern(/\.(jpg|jpeg|png|gif)$/i),
   authorId: joi.string()
   .regex(/^[0-9a-fA-F]{24}$/) 
   .required()
   .messages({
     'string.pattern.base': 'authorId must be valid',
-  }),  coverImageUrl: joi.string().uri(),
+  }), 
   publishedDate: joi.date(),
   isPublished: joi.boolean().default(false),
 });

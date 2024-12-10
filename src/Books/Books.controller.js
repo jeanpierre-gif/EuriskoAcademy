@@ -92,6 +92,88 @@ const getBookById = async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 };
+//update an existing book
+const UpdateBook = async (req, res) => {
+try{
+  const bookId = req.params.bookId;
+  //check if the id is provided
+  if (!bookId || bookId.trim() === "") {
+    return res
+      .status(400)
+      .json({ success: false, message: "Missing or invalid book-id" });
+  }
+  const book = await Book.findById(bookId);
+  if(!book) return res.status(404).json({ success: false, message:"book not found" });
+  if(book.isPublished) return res.status(404).json({ success: false, message:"book cannot be updated because it is published" });
+  const updates = req.body;
+  console.log(updates);
+
+  if(updates.isPublished !==undefined){
+    return res.status(400).json({
+      success: false,
+      message:"cannot change publish status of the book"
+    })
+  }
+  const Image = req.file;
+  const updatedData = {
+   title:{
+    en: updates.title?.en || book.title.en,
+    ar: updates.title?.ar || book.title.ar
+   },
+   isbn: updates.isbn || book.isbn,
+   genre: updates.genre || book.genre,
+   description:{
+    en: updates.description?.en || book.description.en,
+    ar: updates.description?.ar || book.description.ar
+   },
+   numberOfAvailableCopies: updates.numberOfAvailableCopies || book.numberOfAvailableCopies,
+   isBorrowable: updates.isBorrowable || book.isBorrowable,
+   numberOfBorrowableDays: updates.numberOfBorrowableDays || book.numberOfBorrowableDays,
+   isOpenToReviews: updates.isOpenToReviews || book.isOpenToReviews,
+   minAge : updates.minAge || book.minAge,
+   authorId : updates.authorId || book.authorId,
+   coverImageUrl: Image ? Image.filename : book.coverImageUrl,
+   publishedDate : updates.publishedDate || book.publishedDate
+  }
+  const {error, value} = bookValidationSchema.validate(updatedData,{
+    abortEarly: false,
+  });
+  if(error){
+    return res.status(400).json({
+      success:false,
+      message:"Validation error",
+      details: error.details.map((err)=>err.message)
+    });
+  }
+  book.title.en= updatedData.title.en;
+  book.title.ar = updatedData.title.ar;
+  book.isbn = updatedData.isbn;
+  book.genre = updatedData.genre;
+  book.description.en  = updatedData.description.en;
+  book.description.ar = updatedData.description.ar;
+  book.numberOfAvailableCopies = updatedData.numberOfAvailableCopies;
+  book.numberOfBorrowableDays = updatedData.numberOfBorrowableDays;
+  book.isBorrowable = updatedData.isBorrowable;
+  book.isOpenToReviews = updatedData.isOpenToReviews;
+  book.minAge = updatedData.minAge;
+  book.authorId = updatedData.authorId;
+  book.coverImageUrl = updatedData.coverImageUrl;
+  book.publishedDate = updatedData.publishedDate;
+
+  await book.save();
+  res
+  .status(200)
+  .json({
+    success: true,
+    message: "book updated successfully",
+    data: book,
+  });
+}catch (err) {
+  res.status(500).json({ success: false, message: err.message });
+}
+
+}
+
 
 //delete book by id
 const deleteBookById = async (req, res) => {
@@ -111,4 +193,4 @@ const deleteBookById = async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 };
-module.exports = { createBook, getBookById, deleteBookById, fetchAllBooks };
+module.exports = { createBook, getBookById, deleteBookById, fetchAllBooks,UpdateBook };
