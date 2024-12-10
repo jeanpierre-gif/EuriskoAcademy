@@ -158,17 +158,48 @@ const updateAuthorById = async (req, res) => {
 
     //save the updated author
     await author.save();
-    res.status(200).json({ success: true, data: author });
+    res
+      .status(200)
+      .json({
+        success: true,
+        message: "author updated successfully",
+        data: author,
+      });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
 };
 
 //Web API
+const getAuthorProfileById = async (req,res)=>{
+  try{
+   const id = req.params.authorId;
+   console.log(id);
+   //get the language from the headers and set the english to default incase nothing is provided
+   const language = req.headers['accept-language'] || 'en';
+   //validate the language provided
+   const validLanguages = ['en','ar'];
+   const lang = validLanguages.includes(language) ? language : 'en';
+   //get the author by id
+   const author = await Author.findById(id);
+   if(!author) return res.status(404).json({ success: false, message:"author not found" });
+   const response = {
+    name : author.name[lang],
+    biography : author.biography[lang],
+    profileImageUrl : author.profileImageUrl,
+    birthDate : author.birthDate
 
+   };
+   res.status(200).json({ success: true, data: response });
+
+  }catch(err){
+    res.status(500).json({ success: false, message: err.message });
+  }
+}
 module.exports = {
   createAuthor,
   getAuthorById,
   deleteAuthorById,
   updateAuthorById,
+  getAuthorProfileById
 };
