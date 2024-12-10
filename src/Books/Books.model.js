@@ -18,7 +18,7 @@ const BookSchema = new mongoose.Schema(
     numberOfBorrowableDays: { type: Number, default: 0, required: true },
     isOpenToReviews: { type: Boolean, required: true, default: false },
     minAge: { type: Number, required: true },
-    authorId: { type: Number, ref: "Author", required: false },
+    authorId: { type: mongoose.Schema.Types.ObjectId, ref: "Author", required: true },
     coverImageUrl: { type: String, required: true },
     publishedDate: { type: Date, required: true },
     isPublished: { type: Boolean, default: false },
