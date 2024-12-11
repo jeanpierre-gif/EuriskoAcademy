@@ -243,6 +243,32 @@ const togglePublishStatus = async (req, res) => {
   }
 };
 
+//KPIs
+const getkpis = async (req, res) => {
+  try{
+    const totalBooks = await Book.countDocuments(); // Total number of books
+    const publishedBooks = await Book.countDocuments({ isPublished: true }); //published books
+    
+    const booksPublishRate = totalBooks === 0 ? 0 : (publishedBooks / totalBooks) * 100; //If no books, return 0%
+
+    const members = await Member.find(); // Get all members
+    const totalReturnRate = members.reduce((acc, member) => acc + member.returnRate, 0);
+    const averageReturnRate = members.length === 0 ? 0 : totalReturnRate / members.length; //If no members, return 0%
+
+    res.json({
+      success: true,
+      kpis: {
+        booksPublishRate,
+        averageReturnRate,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+}
 
 //Web APIs
 const GetPublishedBooks =async (req, res) =>{
@@ -316,4 +342,4 @@ const getBook = async (req,res)=>{
     return res.status(500).json({success: false, message:err.message});
   }
 }
-module.exports = { createBook, getBookById, deleteBookById, fetchAllBooks,UpdateBook,GetPublishedBooks,getBook,togglePublishStatus };
+module.exports = { createBook, getBookById, deleteBookById, fetchAllBooks,UpdateBook,GetPublishedBooks,getBook,togglePublishStatus,getkpis };

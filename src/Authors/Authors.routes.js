@@ -6,7 +6,7 @@ const {
   updateAuthorById,
   getAuthorProfileById,
 } = require("./Authors.controller");
-const uploadPicture = require("../config/Multer.config");
+const uploadPicture = require("../Middlewares/MulterMiddleware");
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 const express = require('express');
-const {createBook,getBookById,deleteBookById,fetchAllBooks,UpdateBook,GetPublishedBooks,getBook,togglePublishStatus} = require('./Books.controller');
-const uploadPicture = require('../config/Multer.config');
+const {createBook,getBookById,deleteBookById,fetchAllBooks,UpdateBook,GetPublishedBooks,getBook,togglePublishStatus,getkpis} = require('./Books.controller');
+const uploadPicture = require('../Middlewares/MulterMiddleware');
 
 const router = express.Router();
 router.post('/create-book',uploadPicture.single("coverImageUrl") ,createBook);
@@ -11,4 +11,5 @@ router.post('/update-book/:bookId',uploadPicture.single("coverImageUrl"),UpdateB
 router.get('/status-update-book/:bookId',togglePublishStatus);
 router.get('/get-published-books', GetPublishedBooks);
 router.get('/get-book/:bookId',getBook);
+router.get('/get-kpis',getkpis);
 module.exports = router;
