@@ -223,6 +223,88 @@ class MemberService {
 
     return totalBooks > 0 ? (returnedOnTime / totalBooks) * 100 : 0;
   }
+
+  async getMembersBorrowedBooks(memberId) {
+    try {
+      const member = await Member.findById(memberId);
+  
+      if (!member) {
+        throw new Error('Member not found');
+      }  
+      const currentDate = new Date();
+  
+      //retrieve all borrowed books
+      const borrowedBooksDetails = await Promise.all(
+        member.borrowedBooks.map(async (borrowedBook) => {
+          //fetch the book details directly from the book collection
+          const book = await Book.findById(borrowedBook.borrowedBookId);
+            if (!book) {
+            console.warn('Book not found for borrowedBookId:', borrowedBook.borrowedBookId);
+            return null;
+          }
+  
+          const borrowedDate = new Date(borrowedBook.borrowedDate);
+          const dueDate = new Date(borrowedDate);
+          const daysToBorrow = book.numberOfBorrowableDays; 
+          dueDate.setDate(dueDate.getDate() + daysToBorrow);
+  
+          const daysLeft = Math.ceil((dueDate - currentDate) / (1000 * 60 * 60 * 24));
+          const hoursLeft = Math.ceil((dueDate - currentDate) / (1000 * 60 * 60));
+  
+          // Determine flags
+          let warningFlag = false;
+          let expiredFlag = false;
+  
+          if (hoursLeft <= 12 && hoursLeft > 0) {
+            warningFlag = true; // Less than 12 hours before return
+          }
+          if (currentDate > dueDate) {
+            expiredFlag = true; //book is overdue
+          }
+  
+          return {
+            borrowedBookId: borrowedBook.borrowedBookId,
+            title: book.title,
+            isReturned: !!borrowedBook.returnDate,
+            daysLeft: borrowedBook.returnDate ? null : daysLeft, // Null if returned
+            warningFlag: borrowedBook.returnDate ? false : warningFlag, //no warning flag if returned
+            expiredFlag: borrowedBook.returnDate ? false : expiredFlag, //no expiry if returned
+          };
+        })
+      );
+  
+      return borrowedBooksDetails;
+    } catch (err) {
+      console.error('Error in getMembersBorrowedBooks:', err.message);
+      throw err;
+    }
+  }
+  async subscribeToBook(memberId, bookId){
+    const book = await Book.findById(bookId);
+  if (!book) {
+    throw new Error('Book not found');
+  }
+  const member = await Member.findById(memberId);
+  if (!member) {
+    throw new Error('Member not found');
+  }
+  let message='';
+  if(member.subscribedBooks.includes(bookId)){
+    member.subscribedBooks = member.subscribedBooks.filter(
+      (subscribedBookId) => subscribedBookId.toString() !== bookId.toString()
+    ); 
+    message = 'Unsubscription successful';
+
+  }else{
+    member.subscribedBooks.push(bookId);
+    message = 'Subscription successful';
+
+  }
+  await member.save();
+  return message;
+
+  }
+  
 }
 
 module.exports = new MemberService();

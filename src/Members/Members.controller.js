@@ -160,6 +160,37 @@ class MemberController {
   }
 }
   
+async getMembersBorrowedBooks(req, res) {
+  try {
+    const memberId = req.params.memberId; 
+
+    const borrowedBooks = await MemberService.getMembersBorrowedBooks(memberId);
+
+    return res.status(200).json({
+      success: true,
+      data: borrowedBooks,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+
+ 
+}
+async subscribeToBook(req,res){
+  try {
+    const memberId = req.headers['user-id'];
+    const { bookId } = req.body;
+   
+    const result = await MemberService.subscribeToBook(memberId, bookId);
+    res.status(200).json({ data: result });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+}
+
 }
 
 module.exports = new MemberController();
