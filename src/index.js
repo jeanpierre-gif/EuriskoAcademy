@@ -5,6 +5,7 @@ dotenv.config();
 const mongoose = require('mongoose');
 const bookRoutes=require('./Books/Books.routes');
 const authorRoutes = require('./Authors/Authors.routes');
+const memberRoutes = require('./Members/Members.routes');
 const app = express();
 const logMiddleware = require('./Middlewares/LogMiddleware'); 
 app.use(logMiddleware); 
@@ -15,6 +16,7 @@ const db = mongoose.connection;
 
 app.use('/api/books',bookRoutes);
 app.use('/api/Authors',authorRoutes);
+app.use('/api/members',memberRoutes );
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });

@@ -1,5 +1,6 @@
 const Book = require("./Books.model");
 const Author = require("../Authors/Authors.model");
+const Member = require("../Members/Members.model");
 const bookValidationSchema = require("../Validators/Books.validator");
 const paginate = require("../Services/PaginationService");
 const emailService = require("../Services/Mailer.service");
@@ -42,7 +43,7 @@ const createBook = async (req, res) => {
 //fetch all books
 const fetchAllBooks = async (req, res) => {
   try {
-    //extract query parameters
+    //extract query params
     const { page, limit, genre, title, isbn } = req.query;
 
     //build filters for genre and title and isbn
@@ -215,12 +216,16 @@ const togglePublishStatus = async (req, res) => {
     await book.save();
 
     if (book.isPublished) {
+      const members = await Member.find({ subscribedBooks: bookId });
       try {
-        await emailService.sendEmail({
+             // Send email notifications to all subscribed members
+      const emailPromises = members.map((member) =>
+         emailService.sendEmail({
           to: "jpnakhoul407@gmail.com",
           subject: `Book Published: ${book.title.en}`,
           text: `The book "${book.title.en}" has been published.`,
-        });
+        }));
+        await Promise.all(emailPromises);
         console.log("Notification email sent successfully");
       } catch (err) {
         console.error("Error sending email notification:", err.message);
