@@ -76,7 +76,7 @@ const deleteAuthorById = async (req, res) => {
     if (!authorDeleted)
       return res
         .status(404)
-        .json({ success: false, message: "Book not found" });
+        .json({ success: false, message: "author not found" });
     res.status(200).json({ success: true, message: "author deleted" });
   } catch (err) {
     if (err.name === "CastError") {
