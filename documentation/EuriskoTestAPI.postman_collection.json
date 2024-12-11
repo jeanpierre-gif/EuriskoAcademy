@@ -1,0 +1,2872 @@
+{
+	"info": {
+		"_postman_id": "d5a561bd-623a-48d1-b2fe-173092c86d20",
+		"name": "EuriskoTestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30286016",
+		"_collection_link": "https://euriskohw.postman.co/workspace/EuriskoHW~bc2ce26f-cf5e-4dbe-90d7-0e48a3899e41/collection/30286016-d5a561bd-623a-48d1-b2fe-173092c86d20?action=share&source=collection_link&creator=30286016"
+	},
+	"item": [
+		{
+			"name": "BooksAPI",
+			"item": [
+				{
+					"name": "CMS APIs",
+					"item": [
+						{
+							"name": "CreateBook",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[en]",
+											"value": "adventure book",
+											"type": "text"
+										},
+										{
+											"key": "title[ar]",
+											"value": "المغامرة العظيمة",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "978-5-546-59068-1",
+											"type": "text"
+										},
+										{
+											"key": "genre",
+											"value": "adventure",
+											"type": "text"
+										},
+										{
+											"key": "description[en]",
+											"value": "this is an adventure book",
+											"type": "text"
+										},
+										{
+											"key": "description[ar]",
+											"value": "بالعربية",
+											"type": "text"
+										},
+										{
+											"key": "numberOfAvailableCopies",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "isBorrowable",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "numberOfBorrowableDays",
+											"value": "01",
+											"type": "text"
+										},
+										{
+											"key": "isOpenToReviews",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "minAge",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "6755f7fd2297e292ad7c3536",
+											"type": "text"
+										},
+										{
+											"key": "publishedDate",
+											"value": "2024-12-01\t",
+											"type": "text"
+										},
+										{
+											"key": "isPublished",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "coverImageUrl",
+											"type": "file",
+											"src": "/C:/Users/User/Desktop/Screenshot 2024-08-19 155136.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/books/create-book",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"create-book"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CreateBook",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title[en]",
+													"value": "adventure book",
+													"type": "text"
+												},
+												{
+													"key": "title[ar]",
+													"value": "المغامرة العظيمة",
+													"type": "text"
+												},
+												{
+													"key": "isbn",
+													"value": "978-5-546-59068-1",
+													"type": "text"
+												},
+												{
+													"key": "genre",
+													"value": "adventure",
+													"type": "text"
+												},
+												{
+													"key": "description[en]",
+													"value": "this is an adventure book",
+													"type": "text"
+												},
+												{
+													"key": "description[ar]",
+													"value": "بالعربية",
+													"type": "text"
+												},
+												{
+													"key": "numberOfAvailableCopies",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "isBorrowable",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "numberOfBorrowableDays",
+													"value": "01",
+													"type": "text"
+												},
+												{
+													"key": "isOpenToReviews",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "minAge",
+													"value": "12",
+													"type": "text"
+												},
+												{
+													"key": "authorId",
+													"value": "6755f7fd2297e292ad7c3536",
+													"type": "text"
+												},
+												{
+													"key": "publishedDate",
+													"value": "2024-12-01\t",
+													"type": "text"
+												},
+												{
+													"key": "isPublished",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "coverImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/Screenshot 2024-08-19 155136.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/books/create-book",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"create-book"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "582"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"246-jcp9tF23hL/2a2QonvZd2rpkITs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 13:14:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": {\n            \"en\": \"adventure book\",\n            \"ar\": \"المغامرة العظيمة\"\n        },\n        \"isbn\": \"978-5-546-59068-1\",\n        \"genre\": \"adventure\",\n        \"description\": {\n            \"en\": \"this is an adventure book\",\n            \"ar\": \"بالعربية\"\n        },\n        \"numberOfAvailableCopies\": 10,\n        \"isBorrowable\": true,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"minAge\": 12,\n        \"authorId\": \"6755f7fd2297e292ad7c3536\",\n        \"coverImageUrl\": \"1733836463182.png\",\n        \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n        \"isPublished\": true,\n        \"_id\": \"67583eaf881c4299868cec3b\",\n        \"createdAt\": \"2024-12-10T13:14:23.196Z\",\n        \"updatedAt\": \"2024-12-10T13:14:23.196Z\",\n        \"__v\": 0\n    }\n}"
+								},
+								{
+									"name": "CreateBook",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title[en]",
+													"value": "adventure book",
+													"type": "text"
+												},
+												{
+													"key": "title[ar]",
+													"value": "المغامرة العظيمة",
+													"type": "text"
+												},
+												{
+													"key": "isbn",
+													"value": "978-5-546-59068-1",
+													"type": "text"
+												},
+												{
+													"key": "genre",
+													"value": "adventure",
+													"type": "text"
+												},
+												{
+													"key": "description[en]",
+													"value": "this is an adventure book",
+													"type": "text"
+												},
+												{
+													"key": "description[ar]",
+													"value": "بالعربية",
+													"type": "text"
+												},
+												{
+													"key": "numberOfAvailableCopies",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "isBorrowable",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "numberOfBorrowableDays",
+													"value": "01",
+													"type": "text"
+												},
+												{
+													"key": "isOpenToReviews",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "minAge",
+													"value": "12",
+													"type": "text"
+												},
+												{
+													"key": "authorId",
+													"value": "6755f7fd2297e292ad7c3536",
+													"type": "text"
+												},
+												{
+													"key": "publishedDate",
+													"value": "2024-12-01\t",
+													"type": "text"
+												},
+												{
+													"key": "isPublished",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "coverImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/Screenshot 2024-08-19 155136.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/books/create-book",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"create-book"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "582"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"246-jcp9tF23hL/2a2QonvZd2rpkITs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 13:14:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": {\n            \"en\": \"adventure book\",\n            \"ar\": \"المغامرة العظيمة\"\n        },\n        \"isbn\": \"978-5-546-59068-1\",\n        \"genre\": \"adventure\",\n        \"description\": {\n            \"en\": \"this is an adventure book\",\n            \"ar\": \"بالعربية\"\n        },\n        \"numberOfAvailableCopies\": 10,\n        \"isBorrowable\": true,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"minAge\": 12,\n        \"authorId\": \"6755f7fd2297e292ad7c3536\",\n        \"coverImageUrl\": \"1733836463182.png\",\n        \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n        \"isPublished\": true,\n        \"_id\": \"67583eaf881c4299868cec3b\",\n        \"createdAt\": \"2024-12-10T13:14:23.196Z\",\n        \"updatedAt\": \"2024-12-10T13:14:23.196Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "GetBookById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/get-book-by-id/6755ceec9b0fd1a97298110a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"get-book-by-id",
+										"6755ceec9b0fd1a97298110a"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetBookById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/get-book-by-id/6755ceec9b0fd1a97298110a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"get-book-by-id",
+												"6755ceec9b0fd1a97298110a"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "483"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1e3-WoV7CMdC44NL4V384s8EM2lSXzM\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 08 Dec 2024 17:47:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": {\n            \"en\": \"Book Title in English\",\n            \"ar\": \"عنوان الكتاب بالعربية\"\n        },\n        \"description\": {\n            \"en\": \"english description\",\n            \"ar\": \"بالعربية\"\n        },\n        \"_id\": \"6755ceec9b0fd1a97298110a\",\n        \"isbn\": \"978-5-596-52068-7\",\n        \"genre\": \"fiction\",\n        \"numberOfAvailableCopies\": 10,\n        \"isBorrowable\": true,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"minAge\": 12,\n        \"authorId\": 1,\n        \"coverImageUrl\": \"1733676780401.png\",\n        \"isPublished\": true,\n        \"createdAt\": \"2024-12-08T16:53:00.407Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteBookById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/delete-book/675573f11234a77a0fa65803",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"delete-book",
+										"675573f11234a77a0fa65803"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "DeleteBookById",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/delete-book/675573f11234a77a0fa65803",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"delete-book",
+												"675573f11234a77a0fa65803"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-9Wsh+Ulh36Uhq6ylxG5pCkcdTlA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 08 Dec 2024 18:07:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Book deleted successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "GetAllBooks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/getbooks?page=1&limit=5&title=المغامرة",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"getbooks"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "title",
+											"value": "المغامرة"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/getbooks?page=1&limit=5&title=المغامرة",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"getbooks"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												},
+												{
+													"key": "title",
+													"value": "المغامرة"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "583"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"247-g3zPrLFbhfDX4vemqb++c+NX1Es\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 13:17:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"pagination\": {\n        \"totalItems\": 1,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"pageSize\": 5\n    },\n    \"data\": [\n        {\n            \"title\": {\n                \"en\": \"adventure book\",\n                \"ar\": \"المغامرة العظيمة\"\n            },\n            \"description\": {\n                \"en\": \"this is an adventure book\",\n                \"ar\": \"بالعربية\"\n            },\n            \"_id\": \"67583eaf881c4299868cec3b\",\n            \"isbn\": \"978-5-546-59068-1\",\n            \"genre\": \"adventure\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 1,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"authorId\": \"6755f7fd2297e292ad7c3536\",\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"createdAt\": \"2024-12-10T13:14:23.196Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/getbooks?page=2&limit=5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"getbooks"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2272"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"8e0-gZIG7NzRxojHF4TovtHzYKqDCjI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 13:18:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"pagination\": {\n        \"totalItems\": 16,\n        \"currentPage\": 2,\n        \"totalPages\": 4,\n        \"pageSize\": 5\n    },\n    \"data\": [\n        {\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"description\": {\n                \"en\": \"english description\",\n                \"ar\": \"arabic desc\"\n            },\n            \"_id\": \"6755cde777ba2ecf10e149ad\",\n            \"isbn\": \"978-0-596-52068-7\",\n            \"genre\": \"fiction\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 10,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"createdAt\": \"2024-12-08T16:48:39.570Z\",\n            \"__v\": 0\n        },\n        {\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"description\": {\n                \"en\": \"english description\",\n                \"ar\": \"arabic desc\"\n            },\n            \"_id\": \"675588345d00aeb94b94b6c2\",\n            \"isbn\": \"626-9-12-148410-0\",\n            \"genre\": \"fiction\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 10,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"createdAt\": \"2024-12-08T11:51:16.616Z\",\n            \"__v\": 0\n        },\n        {\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"description\": {\n                \"en\": \"english description\",\n                \"ar\": \"arabic desc\"\n            },\n            \"_id\": \"6755881b5d00aeb94b94b6be\",\n            \"isbn\": \"826-9-12-148410-0\",\n            \"genre\": \"fiction\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 10,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"createdAt\": \"2024-12-08T11:50:51.285Z\",\n            \"__v\": 0\n        },\n        {\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"description\": {\n                \"en\": \"english description\",\n                \"ar\": \"arabic desc\"\n            },\n            \"_id\": \"67557ce9d96556ea322ead6a\",\n            \"isbn\": \"971-2-19-148410-0\",\n            \"genre\": \"fiction\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 10,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"__v\": 0\n        },\n        {\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"description\": {\n                \"en\": \"english description\",\n                \"ar\": \"arabic desc\"\n            },\n            \"_id\": \"67558199d96556ea322ead7c\",\n            \"isbn\": \"926-9-12-148410-0\",\n            \"genre\": \"fiction\",\n            \"numberOfAvailableCopies\": 10,\n            \"isBorrowable\": true,\n            \"numberOfBorrowableDays\": 10,\n            \"isOpenToReviews\": true,\n            \"minAge\": 12,\n            \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n            \"isPublished\": true,\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "isbn",
+											"value": "978-5-546-59068-2",
+											"type": "text"
+										},
+										{
+											"key": "description.ar",
+											"value": "بالعربية",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "6755f01ad824cf2520d41525",
+											"type": "text"
+										},
+										{
+											"key": "coverImageUrl",
+											"type": "file",
+											"src": "/C:/Users/User/Desktop/noise-light.png"
+										},
+										{
+											"key": "isPublished",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/books/update-book/67581926be6039f1a0617c2c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"update-book",
+										"67581926be6039f1a0617c2c"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "isbn",
+													"value": "978-5-546-59068-2",
+													"type": "text"
+												},
+												{
+													"key": "description.ar",
+													"value": "بالعربية",
+													"type": "text"
+												},
+												{
+													"key": "authorId",
+													"value": "6755f01ad824cf2520d41525",
+													"type": "text"
+												},
+												{
+													"key": "coverImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/noise-light.png"
+												},
+												{
+													"key": "isPublished",
+													"value": "true",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/books/update-book/67581926be6039f1a0617c2c",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"update-book",
+												"67581926be6039f1a0617c2c"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "70"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"46-qvfTDsblDmRL9R2T45RkNtmcYxA\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 14:38:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"cannot change publish status of the book\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "isbn",
+													"value": "978-5-546-59068-2",
+													"type": "text"
+												},
+												{
+													"key": "description.ar",
+													"value": "بالعربية",
+													"type": "text"
+												},
+												{
+													"key": "authorId",
+													"value": "6755f01ad824cf2520d41525",
+													"type": "text"
+												},
+												{
+													"key": "coverImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/noise-light.png"
+												},
+												{
+													"key": "isPublished",
+													"value": "true",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/books/update-book/67581926be6039f1a0617c2c",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"update-book",
+												"67581926be6039f1a0617c2c"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "629"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"275-v6fNOX5k1/e4J/gC0j0OaB+EdnU\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 14:39:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"book updated successfully\",\n    \"data\": {\n        \"title\": {\n            \"en\": \"Book Title in English\",\n            \"ar\": \"عنوان الكتاب بالعربية\"\n        },\n        \"description\": {\n            \"en\": \"english description\",\n            \"ar\": \"بالعربية\"\n        },\n        \"_id\": \"67581926be6039f1a0617c2c\",\n        \"isbn\": \"978-5-546-59068-2\",\n        \"genre\": \"fiction\",\n        \"numberOfAvailableCopies\": 10,\n        \"isBorrowable\": true,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"minAge\": 12,\n        \"authorId\": \"6755f01ad824cf2520d41525\",\n        \"coverImageUrl\": \"1733841590128.png\",\n        \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n        \"isPublished\": false,\n        \"createdAt\": \"2024-12-10T10:34:14.412Z\",\n        \"updatedAt\": \"2024-12-10T14:39:50.135Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateStatusBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/status-update-book/67581926be6039f1a0617c2c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"status-update-book",
+										"67581926be6039f1a0617c2c"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/status-update-book/67581926be6039f1a0617c2c",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"status-update-book",
+												"67581926be6039f1a0617c2c"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "658"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"292-WKgAxRPR60fvZFMBjhLfOaetJWs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 19:50:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Book published successfully and email sent successfully\",\n    \"data\": {\n        \"title\": {\n            \"en\": \"Book Title in English\",\n            \"ar\": \"عنوان الكتاب بالعربية\"\n        },\n        \"description\": {\n            \"en\": \"english description\",\n            \"ar\": \"بالعربية\"\n        },\n        \"_id\": \"67581926be6039f1a0617c2c\",\n        \"isbn\": \"978-5-546-59068-2\",\n        \"genre\": \"fiction\",\n        \"numberOfAvailableCopies\": 10,\n        \"isBorrowable\": true,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"minAge\": 12,\n        \"authorId\": \"6755f01ad824cf2520d41525\",\n        \"coverImageUrl\": \"1733841590128.png\",\n        \"publishedDate\": \"2024-11-30T22:00:00.000Z\",\n        \"isPublished\": true,\n        \"createdAt\": \"2024-12-10T10:34:14.412Z\",\n        \"updatedAt\": \"2024-12-10T19:50:09.061Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getKpis",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/get-kpis",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"get-kpis"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/books/get-kpis",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"get-kpis"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "75"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4b-duueNGIWpvEbVND9DGk0R/DxXFI\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 10:45:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"kpis\": {\n        \"booksPublishRate\": 93.75,\n        \"averageReturnRate\": 72.5\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Web APIs",
+					"item": [
+						{
+							"name": "GetPublishedBooks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/books/get-published-books?limit=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"get-published-books"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/books/get-published-books?limit=20",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"get-published-books"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "20"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2745"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ab9-hrhMLyyipgO4mRFOsu7xJIDG1JU\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 16:17:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"pagination\": {\n        \"totalItems\": 14,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"pageSize\": 20\n    },\n    \"data\": [\n        {\n            \"title\": \"عنوان الكتاب بالعربية\\t\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"6755775554e3924bbaf1b741\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733654357140.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\\t\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"67557762d96556ea322ead65\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733654370574.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"67557ce9d96556ea322ead6a\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733655785715.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"67557ec7d96556ea322ead6e\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733656263618.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"6755806fd96556ea322ead72\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733656687224.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"675580e8d96556ea322ead78\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733656808873.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"67558199d96556ea322ead7c\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733656985128.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"6755881b5d00aeb94b94b6be\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733658651249.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"675588345d00aeb94b94b6c2\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733658676611.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"6755cde777ba2ecf10e149ad\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733676519541.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"arabic desc\",\n            \"_id\": \"6755ce49214a9b8058540473\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733676617261.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"بالعربية\",\n            \"_id\": \"6755ceec9b0fd1a97298110a\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733676780401.png\"\n        },\n        {\n            \"title\": \"عنوان الكتاب بالعربية\",\n            \"description\": \"بالعربية\",\n            \"_id\": \"675818eebe6039f1a0617c25\",\n            \"genre\": \"fiction\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733826798288.png\"\n        },\n        {\n            \"title\": \"المغامرة العظيمة\",\n            \"description\": \"بالعربية\",\n            \"_id\": \"67583eaf881c4299868cec3b\",\n            \"genre\": \"adventure\",\n            \"isBorrowable\": true,\n            \"coverImageUrl\": \"1733836463182.png\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "GetBook",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/books/get-book/67583eaf881c4299868cec3b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"get-book",
+										"67583eaf881c4299868cec3b"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/books/get-book/67583eaf881c4299868cec3b",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"books",
+												"get-book",
+												"67583eaf881c4299868cec3b"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "307"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"133-xh12wNnNdOh4PF0ZAfYkQDrfPXs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 16:51:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"title\": \"المغامرة العظيمة\",\n        \"description\": \"بالعربية\",\n        \"isbn\": \"978-5-546-59068-1\",\n        \"genre\": \"adventure\",\n        \"numberOfAvailableCopies\": 10,\n        \"numberOfBorrowableDays\": 1,\n        \"isOpenToReviews\": true,\n        \"authorId\": \"6755f7fd2297e292ad7c3536\",\n        \"publishedDate\": \"2024-11-30T22:00:00.000Z\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AuthorsAPI",
+			"item": [
+				{
+					"name": "CMS APIs",
+					"item": [
+						{
+							"name": "CreateAuthor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name[en]",
+											"value": "Jp",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "الكتاب",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "akhouljp@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "biography[en]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "biography[ar]",
+											"value": "الكتاب",
+											"type": "text"
+										},
+										{
+											"key": "profileImageUrl",
+											"type": "file",
+											"src": "/C:/Users/User/Desktop/apis.png"
+										},
+										{
+											"key": "birthDate",
+											"value": "9-10-2002",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Authors/add-author",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Authors",
+										"add-author"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CreateAuthor",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name[en]",
+													"value": "Jp",
+													"type": "text"
+												},
+												{
+													"key": "name[ar]",
+													"value": "الكتاب",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "akhouljp@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "biography[en]",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "biography[ar]",
+													"value": "الكتاب",
+													"type": "text"
+												},
+												{
+													"key": "profileImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/apis.png"
+												},
+												{
+													"key": "birthDate",
+													"value": "9-10-2002",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/add-author",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"add-author"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14f-o+w559itFn/lVV9FloCQ2JsMA1Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 08 Dec 2024 19:48:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": {\n            \"en\": \"Jp\",\n            \"ar\": \"الكتاب\"\n        },\n        \"email\": \"akhouljp@gmail.com\",\n        \"biography\": {\n            \"en\": \"test\",\n            \"ar\": \"الكتاب\"\n        },\n        \"profileImageUrl\": \"1733687293608.png\",\n        \"birthDate\": \"2002-09-09T21:00:00.000Z\",\n        \"_id\": \"6755f7fd2297e292ad7c3536\",\n        \"createdAt\": \"2024-12-08T19:48:13.652Z\",\n        \"updatedAt\": \"2024-12-08T19:48:13.652Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "GetAuthorById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Authors/get-author-by-id?author-id=6755ef459c3a2a305f4891a6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Authors",
+										"get-author-by-id"
+									],
+									"query": [
+										{
+											"key": "author-id",
+											"value": "6755ef459c3a2a305f4891a6"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAuthorById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/get-author-by-id?author-id=6755ef459c3a2a305f4891a6",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"get-author-by-id"
+											],
+											"query": [
+												{
+													"key": "author-id",
+													"value": "6755ef459c3a2a305f4891a6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "327"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"147-eZR6VYFnymNGVdpU1LAm7nUvuzo\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 09 Dec 2024 10:11:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": {\n            \"en\": \"Jp\",\n            \"ar\": \"jp\"\n        },\n        \"biography\": {\n            \"en\": \"test\",\n            \"ar\": \"test\"\n        },\n        \"_id\": \"6755ef459c3a2a305f4891a6\",\n        \"email\": \"nakhouljp@gmail.com\",\n        \"profileImageUrl\": \"uploads\\\\1733685061956.png\",\n        \"birthDate\": \"2002-09-09T21:00:00.000Z\",\n        \"createdAt\": \"2024-12-08T19:11:01.988Z\",\n        \"updatedAt\": \"2024-12-08T19:11:01.988Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteAuthorById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/Authors/delete-author?author-id=6755ef459c3a2a305f4891a6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Authors",
+										"delete-author"
+									],
+									"query": [
+										{
+											"key": "author-id",
+											"value": "6755ef459c3a2a305f4891a6"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "DeleteAuthorById",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/delete-author?author-id=6755ef459c3a2a305f4891a6",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"delete-author"
+											],
+											"query": [
+												{
+													"key": "author-id",
+													"value": "6755ef459c3a2a305f4891a6"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "43"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2b-FYTMr8r3CH6WlncgbOzjNy2WgfY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 09 Dec 2024 10:15:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"author deleted\"\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateAuthorById",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "nakhouljayp@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "الكتابالكتاب",
+											"type": "text"
+										},
+										{
+											"key": "profileImageUrl",
+											"type": "file",
+											"src": "/C:/Users/User/Desktop/noise-light.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/Authors/update-author?author-id=6755f7fd2297e292ad7c3536",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Authors",
+										"update-author"
+									],
+									"query": [
+										{
+											"key": "author-id",
+											"value": "6755f7fd2297e292ad7c3536"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdateAuthorById",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "nakhouljayp@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "name[ar]",
+													"value": "الكتابالكتاب",
+													"type": "text"
+												},
+												{
+													"key": "profileImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/noise-light.png",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/update-author?author-id=6755f7fd2297e292ad7c3536",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"update-author"
+											],
+											"query": [
+												{
+													"key": "author-id",
+													"value": "6755f7fd2297e292ad7c3536"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "350"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"15e-tYPy3sovIdW1yF/i68hg5/Vja6Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 09 Dec 2024 11:48:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": {\n            \"en\": \"Jp\",\n            \"ar\": \"الكتابالكتاب\"\n        },\n        \"biography\": {\n            \"en\": \"test\",\n            \"ar\": \"الكتاب\"\n        },\n        \"_id\": \"6755f7fd2297e292ad7c3536\",\n        \"email\": \"nakhouljayp@gmail.com\",\n        \"profileImageUrl\": \"1733744551780.png\",\n        \"birthDate\": \"2002-09-09T21:00:00.000Z\",\n        \"createdAt\": \"2024-12-08T19:48:13.652Z\",\n        \"updatedAt\": \"2024-12-09T11:48:18.498Z\",\n        \"__v\": 0\n    }\n}"
+								},
+								{
+									"name": "UpdateAuthorById",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "nakhouljayp@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "name[ar]",
+													"value": "الكتابالكتاب",
+													"type": "text"
+												},
+												{
+													"key": "profileImageUrl",
+													"type": "file",
+													"src": "/C:/Users/User/Desktop/noise-light.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/update-author?author-id=6755f7fd2297e292ad7c3536",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"update-author"
+											],
+											"query": [
+												{
+													"key": "author-id",
+													"value": "6755f7fd2297e292ad7c3536"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "390"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"186-Y1+CnoGGeey7+DTj0o+QloCDYGE\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 09:05:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"author updated successfully\",\n    \"data\": {\n        \"name\": {\n            \"en\": \"Jp\",\n            \"ar\": \"الكتابالكتاب\"\n        },\n        \"biography\": {\n            \"en\": \"test\",\n            \"ar\": \"الكتاب\"\n        },\n        \"_id\": \"6755f7fd2297e292ad7c3536\",\n        \"email\": \"nakhouljayp@gmail.com\",\n        \"profileImageUrl\": \"1733744551780.png\",\n        \"birthDate\": \"2002-09-09T21:00:00.000Z\",\n        \"createdAt\": \"2024-12-08T19:48:13.652Z\",\n        \"updatedAt\": \"2024-12-09T11:48:18.498Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Web APIs",
+					"item": [
+						{
+							"name": "GetAuthorProfileById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/Authors/get-author-profile/6756daf31b47a75674f062f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"Authors",
+										"get-author-profile",
+										"6756daf31b47a75674f062f8"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAuthorProfileById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/api/Authors/get-author-profile/6756daf31b47a75674f062f8",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"Authors",
+												"get-author-profile",
+												"6756daf31b47a75674f062f8"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "164"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a4-18LhNowCdhMqlSSqSqHTubAQdo0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 09:22:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"الكتاب\",\n        \"biography\": \"الكتاب الكتاب\",\n        \"profileImageUrl\": \"1733745395458.png\",\n        \"birthDate\": \"2002-10-09T21:00:00.000Z\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MembersAPI",
+			"item": [
+				{
+					"name": "CMS APIs",
+					"item": [
+						{
+							"name": "AddMember",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"jeanpierre\",\r\n  \"username\": \"jayp\",\r\n  \"email\": \"nakhouljp@gmail.com\",\r\n  \"birthDate\": \"10-2-2002\",\r\n  \"subscribedBooks\": [\"675818eebe6039f1a0617c25\", \"67583eaf881c4299868cec3b\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/members/add-member",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"add-member"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"jeanpierre\",\r\n  \"username\": \"jayp\",\r\n  \"email\": \"nakhouljp@gmail.com\",\r\n  \"birthDate\": \"10-2-2002\",\r\n  \"subscribedBooks\": [\"675818eebe6039f1a0617c25\", \"67583eaf881c4299868cec3b\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/add-member",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"add-member"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "397"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"18d-C5Vc0W2klSyAFnNvSf2TYDZjZyM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 20:26:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Member added successfully\",\n    \"data\": {\n        \"name\": \"jeanpierre\",\n        \"username\": \"jayp\",\n        \"email\": \"nakhouljp@gmail.com\",\n        \"birthDate\": \"2002-10-01T21:00:00.000Z\",\n        \"subscribedBooks\": [\n            \"675818eebe6039f1a0617c25\",\n            \"67583eaf881c4299868cec3b\"\n        ],\n        \"returnRate\": 0,\n        \"_id\": \"6758a40991c64237165e6dd4\",\n        \"borrowedBooks\": [],\n        \"createdAt\": \"2024-12-10T20:26:49.696Z\",\n        \"updatedAt\": \"2024-12-10T20:26:49.696Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteMember",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John Updated\",\r\n  \"username\": \"johnupdated\",\r\n  \"subscribedBooks\": [\"63f1e2d8e8b8f8a5c8899b2f\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/members/delete/6758a2cd0bb43a2b1491b7a3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"delete",
+										"6758a2cd0bb43a2b1491b7a3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"John Updated\",\r\n  \"username\": \"johnupdated\",\r\n  \"subscribedBooks\": [\"63f1e2d8e8b8f8a5c8899b2f\"]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/delete/6758a2cd0bb43a2b1491b7a3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"delete",
+												"6758a2cd0bb43a2b1491b7a3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "373"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"175-lVIxy0FA35YtPcAvWam2RrEnzzI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Dec 2024 20:31:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Member deleted successfully\",\n    \"data\": {\n        \"_id\": \"6758a2cd0bb43a2b1491b7a3\",\n        \"name\": \"John Doe\",\n        \"username\": \"johndoe\",\n        \"email\": \"johndoe@example.com\",\n        \"birthDate\": \"2002-10-01T21:00:00.000Z\",\n        \"subscribedBooks\": [\n            \"63f1e2d8e8b8f8a5c8899b2f\"\n        ],\n        \"returnRate\": 0,\n        \"borrowedBooks\": [],\n        \"createdAt\": \"2024-12-10T20:21:33.466Z\",\n        \"updatedAt\": \"2024-12-10T20:21:33.466Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateMember",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Updated Name\",\r\n  \"email\":\"jaypnakhoul@gmail.com\",\r\n    \"username\":\"joshndoe\",\r\n  \"subscribedBooks\":[\r\n    \"675576fde9c6476c9759ba42\",\r\n    \"6755775554e3924bbaf1b742\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/members/update/6758a3c791c64237165e6dce",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"update",
+										"6758a3c791c64237165e6dce"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Updated Name\",\r\n  \"email\":\"jaypnakhoul@gmail.com\",\r\n  \"subscribedBooks\":[\r\n    \"675576fde9c6476c9759ba42\",\r\n    \"6755775554e3924bbaf1b741\"\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/update/6758a3c791c64237165e6dce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"update",
+												"6758a3c791c64237165e6dce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "407"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"197-qoB8dBgoLK2NXnGZZjGigHW+ehE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 06:34:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Member updated successfully\",\n    \"data\": {\n        \"_id\": \"6758a3c791c64237165e6dce\",\n        \"name\": \"Updated Name\",\n        \"username\": \"joshndoe\",\n        \"email\": \"jaypnakhoul@gmail.com\",\n        \"birthDate\": \"2002-10-01T21:00:00.000Z\",\n        \"subscribedBooks\": [\n            \"675576fde9c6476c9759ba42\",\n            \"6755775554e3924bbaf1b741\"\n        ],\n        \"returnRate\": 0,\n        \"borrowedBooks\": [],\n        \"createdAt\": \"2024-12-10T20:25:43.795Z\",\n        \"updatedAt\": \"2024-12-11T06:12:02.856Z\",\n        \"__v\": 2\n    }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Updated Name\",\r\n  \"email\":\"jaypnakhoul@gmail.com\",\r\n    \"username\":\"joshndoe\",\r\n  \"subscribedBooks\":[\r\n    \"675576fde9c6476c9759ba42\",\r\n    \"6755775554e3924bbaf1b742\"\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/update/6758a3c791c64237165e6dce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"update",
+												"6758a3c791c64237165e6dce"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "71"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"47-UvGVaje4opXVtYgrDXYD81f7k24\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 06:36:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Some of the subscribed books do not exist\"\n}"
+								}
+							]
+						},
+						{
+							"name": "GetMembers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/members/get-members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"get-members"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/members/get-members",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"get-members"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "429"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1ad-yVzhkVdQsvU/3NRVtC6KETHtI0Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 07:11:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"pagination\": {\n        \"totalItems\": 2,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"pageSize\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6758a3c791c64237165e6dce\",\n            \"name\": \"Updated Name\",\n            \"username\": \"joshndoe\",\n            \"email\": \"jaypnakhoul@gmail.com\",\n            \"returnRate\": 20,\n            \"borrowedBooks\": [],\n            \"borrowedBooksCount\": 0\n        },\n        {\n            \"_id\": \"6758a40991c64237165e6dd4\",\n            \"name\": \"jeanpierre\",\n            \"username\": \"jayp\",\n            \"email\": \"nakhouljp@gmail.com\",\n            \"returnRate\": 0,\n            \"borrowedBooks\": [],\n            \"borrowedBooksCount\": 0\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Web APIs",
+					"item": [
+						{
+							"name": "getMemberProfile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/members/member-profile/6758a3c791c64237165e6dce",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"member-profile",
+										"6758a3c791c64237165e6dce"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/members/member-profile/6758a3c791c64237165e6dce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"member-profile",
+												"6758a3c791c64237165e6dce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "368"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"170-DDKtINDNceP9TGFuaBmW9d5AzFk\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 07:30:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6758a3c791c64237165e6dce\",\n        \"name\": \"Updated Name\",\n        \"username\": \"joshndoe\",\n        \"email\": \"jaypnakhoul@gmail.com\",\n        \"birthDate\": \"2002-10-01T21:00:00.000Z\",\n        \"subscribedBooks\": [\n            \"675576fde9c6476c9759ba42\",\n            \"6755775554e3924bbaf1b741\"\n        ],\n        \"returnRate\": 20,\n        \"borrowedBooks\": [],\n        \"createdAt\": \"2024-12-10T20:25:43.795Z\",\n        \"updatedAt\": \"2024-12-11T06:12:02.856Z\",\n        \"__v\": 2\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "BorrowBook",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "user-id",
+										"value": "6758a3c791c64237165e6dce",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\":\"675818eebe6039f1a0617c25\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/members/borrow",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"borrow"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "user-id",
+												"value": "6758a3c791c64237165e6dce",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\":\"675818eebe6039f1a0617c25\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/borrow",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"borrow"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"38-cfdV9wFzwNMdt/TFCmeGidOacQU\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 08:02:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Book borrowed successfully!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ReturnBook",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "user-id",
+												"value": "6758a3c791c64237165e6dce",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\":\"67583eaf881c4299868cec3b\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/return",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"return"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"38-TEmttR7vUh+B94/bFmiONO41EkQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 09:22:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Book returned successfully!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "getMembersBooks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/members/borrowed-books/6758a3c791c64237165e6dce",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"borrowed-books",
+										"6758a3c791c64237165e6dce"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/members/borrowed-books/6758a3c791c64237165e6dce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"borrowed-books",
+												"6758a3c791c64237165e6dce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "423"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1a7-7RdqWiych+stiwPkMc9avcEimE0\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 10:11:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"borrowedBookId\": \"675818eebe6039f1a0617c25\",\n            \"title\": {\n                \"en\": \"Book Title in English\",\n                \"ar\": \"عنوان الكتاب بالعربية\"\n            },\n            \"isReturned\": true,\n            \"daysLeft\": null,\n            \"warningFlag\": false,\n            \"expiredFlag\": false\n        },\n        {\n            \"borrowedBookId\": \"67583eaf881c4299868cec3b\",\n            \"title\": {\n                \"en\": \"adventure book\",\n                \"ar\": \"المغامرة العظيمة\"\n            },\n            \"isReturned\": true,\n            \"daysLeft\": null,\n            \"warningFlag\": false,\n            \"expiredFlag\": false\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "SubscribeUnsubscribe",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "user-id",
+										"value": "6758a3c791c64237165e6dce",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\":\"675576fde9c6476c9759ba42\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/members/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"members",
+										"subscription"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "user-id",
+												"value": "6758a3c791c64237165e6dce",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\":\"675576fde9c6476c9759ba42\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/members/subscription",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"members",
+												"subscription"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "34"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"22-LVs8PjhRsHG7qy4MXGqrjqwWqe4\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 11 Dec 2024 10:29:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"Subscription successful\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
