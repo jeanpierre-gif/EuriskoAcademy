@@ -1,17 +1,16 @@
 const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
 
-// Set the API Key
+//set the api Key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// Function to send email
 const sendEmail = async ({ to, subject, text, html }) => {
   const msg = {
-    to, // Recipient's email
-    from: "jaypnakhoul@gmail.com", // Your verified sender email
-    subject, // Subject line
-    text, // Plain text body
-    html, // HTML body (optional)
+    to, 
+    from: "jaypnakhoul@gmail.com",
+    subject, 
+    text, 
+    html, 
   };
 
   try {

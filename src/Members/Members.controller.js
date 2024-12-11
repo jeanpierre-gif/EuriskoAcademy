@@ -1,4 +1,7 @@
 const MemberService = require("./Members.service");
+const Author =require("../Authors/Authors.model");
+const Member = require('../Members/Members.model');
+const Book = require("../Books/Books.model");
 const {
   memberValidationSchema,
   updateMemberValidationSchema,
@@ -100,6 +103,63 @@ class MemberController {
       });
     }
   }
+
+  //Web APIs
+  async getMemberProfile(req,res){
+    const memberId = req.params.memberId;
+    try{
+      const memberProfile = await MemberService.getMemberProfile(memberId);
+      res.status(200).json({
+        success: true,
+        data: memberProfile,
+      });
+    }
+    catch (error) {
+      console.error('Error fetching member profile:', error.message);
+      res.status(500).json({
+        success: false,
+        message: error.message || 'Failed to fetch member profile',
+      });
+    }
+  }
+  async borrowBook(req, res) {
+    const memberId = req.headers['user-id'];  
+    const { bookId } = req.body;
+  
+    try {
+      const result = await MemberService.borrowBook(memberId, bookId);
+      res.status(200).json({
+        success: true,
+        message: result.message,
+      });
+    } catch (error) {
+      console.error('Error borrowing book:', error.message);
+      res.status(500).json({
+        success: false,
+        message: error.message || 'Failed to borrow the book',
+      });
+    }
+  }
+  async returnBook(req,res){
+    const memberId = req.headers['user-id']; 
+  const { bookId } = req.body;
+
+  try {
+    const result = await MemberService.returnBook(memberId, bookId);
+
+    res.status(200).json({
+      success: true,
+      message: result.message,
+    });
+  } catch (error) {
+    console.error('Error returning book:', error.message);
+    res.status(500).json({
+      success: false,
+      message: error.message || 'Failed to return the book',
+    });
+  }
+}
+  
 }
 
 module.exports = new MemberController();
