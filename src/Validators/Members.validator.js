@@ -21,7 +21,7 @@ const memberValidationSchema = Joi.object({
   }),
 });
 
-// Schema for updating a member (all optional)
+//schema for updating a member (all optional)
 const updateMemberValidationSchema = Joi.object({
   name: Joi.string().messages({
     'string.empty': 'Name must be a string',

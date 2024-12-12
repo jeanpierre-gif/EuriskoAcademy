@@ -266,7 +266,7 @@ class MemberService {
             borrowedBookId: borrowedBook.borrowedBookId,
             title: book.title,
             isReturned: !!borrowedBook.returnDate,
-            daysLeft: borrowedBook.returnDate ? null : daysLeft, // Null if returned
+            daysLeft: borrowedBook.returnDate ? null : daysLeft, //null if the book is returned returned
             warningFlag: borrowedBook.returnDate ? false : warningFlag, //no warning flag if returned
             expiredFlag: borrowedBook.returnDate ? false : expiredFlag, //no expiry if returned
           };

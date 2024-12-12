@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "6758a3c791c64237165e6dce"
+  },
+  "name": "Updated Name",
+  "username": "joshndoe",
+  "email": "jaypnakhoul@gmail.com",
+  "birthDate": {
+    "$date": "2002-10-01T21:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "67557ce9d96556ea322ead6a"
+    },
+    {
+      "$oid": "67557ec7d96556ea322ead6e"
+    }
+  ],
+  "returnRate": 45,
+  "borrowedBooks": [
+    {
+      "borrowedBookId": {
+        "$oid": "675818eebe6039f1a0617c25"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-11T08:02:05.883Z"
+      },
+      "returnDate": {
+        "$date": "2024-12-11T08:41:02.711Z"
+      },
+      "_id": {
+        "$oid": "675946fdc885fbeccf731a44"
+      }
+    },
+    {
+      "borrowedBookId": {
+        "$oid": "67583eaf881c4299868cec3b"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-11T09:21:33.136Z"
+      },
+      "returnDate": {
+        "$date": "2024-12-11T09:22:22.276Z"
+      },
+      "_id": {
+        "$oid": "6759599d219b3bb9279d9c45"
+      }
+    },
+    {
+      "borrowedBookId": {
+        "$oid": "675818eebe6039f1a0617c25"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-12T14:17:31.692Z"
+      },
+      "returnDate": null,
+      "_id": {
+        "$oid": "675af07b0ee2453b907cee29"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-12-10T20:25:43.795Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T14:17:32.569Z"
+  },
+  "__v": 17
+},
+{
+  "_id": {
+    "$oid": "6758a40991c64237165e6dd4"
+  },
+  "name": "jeanpierre",
+  "username": "jayp",
+  "email": "nakhouljp@gmail.com",
+  "birthDate": {
+    "$date": "2002-10-01T21:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "675818eebe6039f1a0617c25"
+    },
+    {
+      "$oid": "67583eaf881c4299868cec3b"
+    }
+  ],
+  "returnRate": 100,
+  "borrowedBooks": [
+    {
+      "borrowedBookId": {
+        "$oid": "675818eebe6039f1a0617c25"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-11T08:46:26.232Z"
+      },
+      "returnDate": {
+        "$date": "2024-12-11T08:49:24.895Z"
+      },
+      "_id": {
+        "$oid": "67595162ad536d47e0d6ed78"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-12-10T20:26:49.696Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T08:49:24.920Z"
+  },
+  "__v": 1
+}]

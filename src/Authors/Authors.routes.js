@@ -1,19 +1,13 @@
 const express = require("express");
-const {
-  createAuthor,
-  getAuthorById,
-  deleteAuthorById,
-  updateAuthorById,
-  getAuthorProfileById,
-} = require("./Authors.controller");
+const AuthorController = require("./Authors.controller");
 const uploadPicture = require("../Middlewares/MulterMiddleware");
 
 const router = express.Router();
 
-router.post("/add-author",uploadPicture.single("profileImageUrl"),createAuthor);
-router.get("/get-author-by-id", getAuthorById);
-router.delete("/delete-author", deleteAuthorById);
-router.patch("/update-author",uploadPicture.single("profileImageUrl"),updateAuthorById);
+router.post("/add-author",uploadPicture.single("profileImageUrl"),AuthorController.createAuthor);
+router.get("/get-author-by-id", AuthorController.getAuthorById);
+router.delete("/delete-author", AuthorController.deleteAuthorById);
+router.patch("/update-author",uploadPicture.single("profileImageUrl"),AuthorController.updateAuthorById);
 //web api route
-router.get("/get-author-profile/:authorId",getAuthorProfileById);
+router.get("/get-author-profile/:authorId",AuthorController.getAuthorProfileById);
 module.exports = router;

@@ -1,0 +1,561 @@
+[{
+  "_id": {
+    "$oid": "675576fde9c6476c9759ba42"
+  },
+  "title": {
+    "en": "hello world",
+    "ar": "عنوان"
+  },
+  "isbn": "978-5-546-59068-9",
+  "genre": "science",
+  "description": {
+    "ar": "عنوان",
+    "en": "hahah"
+  },
+  "numberOfAvailableCopies": 0,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 0,
+  "isOpenToReviews": true,
+  "minAge": 6,
+  "authorId": {
+    "$oid": "6755f01ad824cf2520d41525"
+  },
+  "coverImageUrl": "1733654269935.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": false,
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2024-12-12T13:33:17.796Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6755775554e3924bbaf1b741"
+  },
+  "title": {
+    "en": "Book Title in English\t",
+    "ar": "عنوان الكتاب بالعربية\t"
+  },
+  "isbn": "972-2-16-148410-0\t",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733654357140.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67557762d96556ea322ead65"
+  },
+  "title": {
+    "en": "Book Title in English\t",
+    "ar": "عنوان الكتاب بالعربية\t"
+  },
+  "isbn": "971-2-16-148410-0\t",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733654370574.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67557ce9d96556ea322ead6a"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "971-2-19-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733655785715.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67557ec7d96556ea322ead6e"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "976-2-19-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733656263618.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755806fd96556ea322ead72"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "926-2-19-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733656687224.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675580e8d96556ea322ead78"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "926-2-12-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733656808873.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67558199d96556ea322ead7c"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "926-9-12-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733656985128.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755881b5d00aeb94b94b6be"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "826-9-12-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733658651249.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T11:50:51.285Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T11:50:51.285Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675588345d00aeb94b94b6c2"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "626-9-12-148410-0",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733658676611.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T11:51:16.616Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T11:51:16.616Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755cde777ba2ecf10e149ad"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "978-0-596-52068-7",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 10,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733676519541.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T16:48:39.570Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T16:48:39.570Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755ce49214a9b8058540473"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "978-1-596-52068-7",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "المغامرة "
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733676617261.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T16:50:17.267Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T16:50:17.267Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755ceec9b0fd1a97298110a"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "978-5-596-52068-7",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": 1,
+  "coverImageUrl": "1733676780401.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T16:53:00.407Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T16:53:00.407Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675818eebe6039f1a0617c25"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "978-5-596-59068-7",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 2,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": {
+    "$oid": "6755f7fd2297e292ad7c3536"
+  },
+  "coverImageUrl": "1733826798288.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T10:33:18.297Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T14:17:32.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67581926be6039f1a0617c2c"
+  },
+  "title": {
+    "en": "Book Title in English",
+    "ar": "عنوان الكتاب بالعربية"
+  },
+  "isbn": "978-5-546-59068-2",
+  "genre": "fiction",
+  "description": {
+    "en": "english description",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": {
+    "$oid": "6755f01ad824cf2520d41525"
+  },
+  "coverImageUrl": "1733841590128.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T10:34:14.412Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T13:34:39.462Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67583eaf881c4299868cec3b"
+  },
+  "title": {
+    "en": "adventure book",
+    "ar": "المغامرة العظيمة"
+  },
+  "isbn": "978-5-546-59068-1",
+  "genre": "adventure",
+  "description": {
+    "en": "this is an adventure book",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 9,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 6,
+  "authorId": {
+    "$oid": "6755f01ad824cf2520d41525"
+  },
+  "coverImageUrl": "1733836463182.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-10T13:14:23.196Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T09:21:33.981Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675acf42f54e5e5dfec23e00"
+  },
+  "title": {
+    "en": "adventure book",
+    "ar": "المغامرة العظيمة"
+  },
+  "isbn": "978-0-596-52168-7",
+  "genre": "adventure",
+  "description": {
+    "en": "this is an adventure book",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": {
+    "$oid": "6755f7fd2297e292ad7c3536"
+  },
+  "coverImageUrl": "1734004546054.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-12T11:55:46.060Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T11:55:46.060Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675ae492b57e865fe1a8660c"
+  },
+  "title": {
+    "en": "adventure book",
+    "ar": "المغامرة العظيمة"
+  },
+  "isbn": "978-0-596-52168-1",
+  "genre": "adventure",
+  "description": {
+    "en": "this is an adventure book",
+    "ar": "بالعربية"
+  },
+  "numberOfAvailableCopies": 10,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 1,
+  "isOpenToReviews": true,
+  "minAge": 12,
+  "authorId": {
+    "$oid": "6755f7fd2297e292ad7c3536"
+  },
+  "coverImageUrl": "1734010002254.png",
+  "publishedDate": {
+    "$date": "2024-11-30T22:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-12T13:26:42.266Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T13:26:42.266Z"
+  },
+  "__v": 0
+}]
