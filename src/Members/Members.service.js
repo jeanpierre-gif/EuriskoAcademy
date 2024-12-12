@@ -1,7 +1,7 @@
 const Member = require("./Members.model");
 const Book = require("../Books/Books.model");
 const Paginator = require("../Services/PaginationService");
-const {sendEmail} = require("../Services/Mailer.service");
+const { sendEmail } = require("../Services/Mailer.service");
 class MemberService {
   async addMember(memberData) {
     //check if the username or email already exists
@@ -102,7 +102,7 @@ class MemberService {
   async borrowBook(memberId, bookId) {
     try {
       const member = await Member.findById(memberId);
-      const book = await Book.findById(bookId).populate('authorId'); // Populate authorId to get author details
+      const book = await Book.findById(bookId).populate("authorId"); // Populate authorId to get author details
 
       if (!member) throw new Error("Member not found");
       if (!book) throw new Error("Book not found");
@@ -130,11 +130,12 @@ class MemberService {
       });
       book.numberOfAvailableCopies -= 1;
       const authorEmail = book.authorId.email;
+      console.log(authorEmail);
       if (authorEmail) {
         const emailSubject = `Your book "${book.title.en}" has been borrowed`;
         const emailText = `Hello,\n\nWe wanted to inform you that your book "${book.title.en}" has been borrowed by a member.`;
         const emailHtml = `<p>Hello,</p><p>We wanted to inform you that your book "<strong>${book.title.en}</strong>" has been borrowed by a member.</p>`;
-                await sendEmail({
+        await sendEmail({
           to: authorEmail,
           subject: emailSubject,
           text: emailText,
@@ -180,9 +181,8 @@ class MemberService {
       //update returnRate if the book was returned on time
       if (isReturnedOnTime) {
         member.returnRate = Math.min(100, member.returnRate + 5);
-      }else{
+      } else {
         member.returnRate = Math.max(0, member.returnRate - 5);
-
       }
 
       //save the member and update available copies of the book
@@ -227,41 +227,48 @@ class MemberService {
   async getMembersBorrowedBooks(memberId) {
     try {
       const member = await Member.findById(memberId);
-  
+
       if (!member) {
-        throw new Error('Member not found');
-      }  
+        throw new Error("Member not found");
+      }
       const currentDate = new Date();
-  
+
       //retrieve all borrowed books
       const borrowedBooksDetails = await Promise.all(
         member.borrowedBooks.map(async (borrowedBook) => {
           //fetch the book details directly from the book collection
           const book = await Book.findById(borrowedBook.borrowedBookId);
-            if (!book) {
-            console.warn('Book not found for borrowedBookId:', borrowedBook.borrowedBookId);
+          if (!book) {
+            console.warn(
+              "Book not found for borrowedBookId:",
+              borrowedBook.borrowedBookId
+            );
             return null;
           }
-  
+
           const borrowedDate = new Date(borrowedBook.borrowedDate);
           const dueDate = new Date(borrowedDate);
-          const daysToBorrow = book.numberOfBorrowableDays; 
+          const daysToBorrow = book.numberOfBorrowableDays;
           dueDate.setDate(dueDate.getDate() + daysToBorrow);
-  
-          const daysLeft = Math.ceil((dueDate - currentDate) / (1000 * 60 * 60 * 24));
-          const hoursLeft = Math.ceil((dueDate - currentDate) / (1000 * 60 * 60));
-  
+
+          const daysLeft = Math.ceil(
+            (dueDate - currentDate) / (1000 * 60 * 60 * 24)
+          );
+          const hoursLeft = Math.ceil(
+            (dueDate - currentDate) / (1000 * 60 * 60)
+          );
+
           // Determine flags
           let warningFlag = false;
           let expiredFlag = false;
-  
+
           if (hoursLeft <= 12 && hoursLeft > 0) {
             warningFlag = true; // Less than 12 hours before return
           }
           if (currentDate > dueDate) {
             expiredFlag = true; //book is overdue
           }
-  
+
           return {
             borrowedBookId: borrowedBook.borrowedBookId,
             title: book.title,
@@ -272,39 +279,35 @@ class MemberService {
           };
         })
       );
-  
+
       return borrowedBooksDetails;
     } catch (err) {
-      console.error('Error in getMembersBorrowedBooks:', err.message);
+      console.error("Error in getMembersBorrowedBooks:", err.message);
       throw err;
     }
   }
-  async subscribeToBook(memberId, bookId){
+  async subscribeToBook(memberId, bookId) {
     const book = await Book.findById(bookId);
-  if (!book) {
-    throw new Error('Book not found');
+    if (!book) {
+      throw new Error("Book not found");
+    }
+    const member = await Member.findById(memberId);
+    if (!member) {
+      throw new Error("Member not found");
+    }
+    let message = "";
+    if (member.subscribedBooks.includes(bookId)) {
+      member.subscribedBooks = member.subscribedBooks.filter(
+        (subscribedBookId) => subscribedBookId.toString() !== bookId.toString()
+      );
+      message = "Unsubscription successful";
+    } else {
+      member.subscribedBooks.push(bookId);
+      message = "Subscription successful";
+    }
+    await member.save();
+    return message;
   }
-  const member = await Member.findById(memberId);
-  if (!member) {
-    throw new Error('Member not found');
-  }
-  let message='';
-  if(member.subscribedBooks.includes(bookId)){
-    member.subscribedBooks = member.subscribedBooks.filter(
-      (subscribedBookId) => subscribedBookId.toString() !== bookId.toString()
-    ); 
-    message = 'Unsubscription successful';
-
-  }else{
-    member.subscribedBooks.push(bookId);
-    message = 'Subscription successful';
-
-  }
-  await member.save();
-  return message;
-
-  }
-  
 }
 
 module.exports = new MemberService();

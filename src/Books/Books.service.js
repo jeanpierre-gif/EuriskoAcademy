@@ -24,7 +24,7 @@ class BookService {
       const authorError = new Error("Invalid authorId: Author does not exist");
       authorError.statusCode = 400;
       throw authorError;
-    } 
+    }
 
     const book = new Book({
       ...value,
@@ -33,7 +33,7 @@ class BookService {
 
     await book.save();
     return book;
-}
+  }
   //fetch all books
   async fetchAllBooks(query) {
     //extract query params
@@ -256,7 +256,7 @@ class BookService {
   }
 
   //get book by id
-  async getBook(bookId,language) {
+  async getBook(bookId, language) {
     if (!bookId || bookId.trim() === "") {
       throw { status: 400, message: "invalid book id" };
     }
